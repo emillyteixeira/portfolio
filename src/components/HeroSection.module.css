@@ -1,0 +1,22 @@
+/* .heroContainer {
+  background-image: url('../public/images/img-home.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+} */
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+

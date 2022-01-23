@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Images } from "../../public/images/images";
-import Image from "next/image";
-import styles from "./Navbar.module.css";
-import { Button } from "./Button"
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Images } from '../../public/images/images';
+import Image from 'next/image';
+import styles from './Navbar.module.css';
+import { Button } from './Button';
 
 function Navbar() {
   const [click, setClick] = useState(false);
