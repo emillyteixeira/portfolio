@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from './HeroSection.module.css';
-import { Button } from './Button';
-import { Images } from '../../public/images/images';
+import React from "react";
+import Image from "next/image";
+import styles from "./HeroSection.module.css";
+import { Button } from "./Button";
+import { Images } from "../../public/images/images";
 
 function HeroSection() {
   return (
@@ -13,12 +13,11 @@ function HeroSection() {
     //    <Button buttonStyle='btn--outline' buttonSize='btn--large'> H3!P </Button>
     //   </div>
     // </div>
-    <div className={styles.background_image}> 
-        <Image
-          src={Images.homeScreen}
-        />
-      </div>
-  )
+    <>
+      <Image layout="responsive" src={Images.homeScreen} />
+      <p> efwuefbwvlweovbobwe </p>
+    </>
+  );
 }
 
-export default HeroSection
+export default HeroSection;

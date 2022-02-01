@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from './Button';
-import './Footer.module.css';
+import styles from './Footer.module.css';
 
 function Footer() {
 return (
-  <div className='footer-container'>
+  <div className={styles.footerContainer}>
     <section className='footer-subscription'>
       <p className='footer-subscription-heading'>
         sub aqui man pode vim pode pa legal demais man vem de sub!
