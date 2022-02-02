@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "babel src -d lib"
+    "build": "next build"
   },
   "repository": {
     "type": "git",
