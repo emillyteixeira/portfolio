@@ -28,11 +28,6 @@ function Navbar() {
     <>
       <nav className={styles.navbar}>
         <div className={styles.navbarContainer}>
-          <div className={styles.navbarLogo}>
-          <Link href="/" >
-            EMT
-          </Link>
-          </div>
           <div className={styles.menuIcon} onClick={handleClick}>
             <Image src={click ? Images.xIcon : Images.menuIcon} />
           </div>
