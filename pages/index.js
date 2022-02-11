@@ -10,14 +10,10 @@ import Accordeon from "../src/components/Accordeon";
 
 const LightTheme = {
   background: "#fff",
-  /*  titleColor: '#dc658b',
-  taglineColor: '#000', */
 };
 
 const DarkTheme = {
   background: "#000",
-  /* titleColor: '#fff',
-  taglineColor: '#dc658b', */
 };
 
 const themes = {
