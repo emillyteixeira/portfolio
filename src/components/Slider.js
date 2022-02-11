@@ -26,8 +26,46 @@ const items = [
   </Text>,
 ];
 
+const thumbItems = (items, [setThumbIndex, setThumbAnimation]) => {
+  return items.map((item, i) => (
+      <div className="thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
+          {item}
+      </div>
+  ));
+};
+
 function Slider() {
-  return <AliceCarousel autoWidth infinite mouseTracking items={items} />;
+  const slideNext = () => {
+    if (!thumbAnimation && thumbIndex < thumbs.length - 1) {
+        setThumbAnimation(true);
+        setThumbIndex(thumbIndex + 1);
+    }
+};
+
+const slidePrev = () => {
+    if (!thumbAnimation && thumbIndex > 0) {
+        setThumbAnimation(true);
+        setThumbIndex(thumbIndex - 1);
+    }
+};
+  return [
+    <>
+      <div className="btn-prev" onClick={slidePrev}>&lang;</div>
+      <AliceCarousel
+        animationType="fadeout"
+        animationDuration={800}
+        disableDotsControls
+        disableButtonsControls
+        infinite
+        items={items} 
+      />
+      <div className="btn-next" onClick={slideNext}>&rang;</div>
+      </>
+ ]
 }
 
 export default Slider;
+
+
+
+

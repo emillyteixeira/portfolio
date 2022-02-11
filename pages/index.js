@@ -4,9 +4,10 @@ import Navbar from "../src/components/Navbar.js";
 import Introduction from "../src/components/Introduction";
 import Footer from "../src/components/Footer.js";
 import styled, { ThemeProvider } from "styled-components";
-import Slider from "../src/components/Slider.js";
 
-import Accordeon from "../src/components/Accordeon";
+import SobreMim from "./SobreMim.js";
+import Projetos from "./Projetos.js";
+import Indicações from "./Indicações.js";
 
 const LightTheme = {
   background: "#fff",
@@ -49,10 +50,9 @@ function HomePage() {
         <Navbar setTheme={setTheme} theme={theme} />
         <Introduction />
         <PageWrapper>
-          <Accordeon title="1" paragraph="4" />
-          <Accordeon title="2" paragraph="5" />
-          <Accordeon title="3" paragraph="6" />
-          <Slider />
+          <SobreMim />
+          <Projetos />
+          <Indicações />
         </PageWrapper>
         <Footer />
       </ThemeProvider>
