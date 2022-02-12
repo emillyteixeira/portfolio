@@ -23,8 +23,6 @@ const themes = {
 };
 
 const PageWrapper = styled.div`
-  height: 100vh;
-  width: 100%;
   background: #d7eaf2;
 `;
 

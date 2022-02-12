@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 
+import styled from "styled-components";
+
+const AccordeonContainer = styled.div`
+  background-color: #fff;
+  
+
+`;
+
 function Accordeon(props) {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
 
   return (
-    <div>
+    <AccordeonContainer>
       <div onClick={handleClick}>
         <h3>{props.title}</h3>
       </div>
@@ -14,7 +22,7 @@ function Accordeon(props) {
           <p>{props.paragraph}</p>
         </div>
       )}
-    </div>
+    </AccordeonContainer>
   );
 }
 

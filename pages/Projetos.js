@@ -18,7 +18,6 @@ const Text = styled.p`
 `;
 
 const PageContainer = styled.div`
-  position: relative;
   width: 100vw;
   display: inline-grid;
 `;
@@ -28,13 +27,14 @@ const CardContainer = styled.div`
   width: 300px;
   border: 3px solid #73AD21;
   padding: 10px;
+  display: flex;
 
 `; 
 
 
 function Projetos() {
   return (
-    <>
+    <div id="projetos">
       <PageContainer>
         <Title>Projetos</Title>
         <Text>Estudante na sofrencia</Text>
@@ -43,7 +43,7 @@ function Projetos() {
           <Card />
         </CardContainer>  
       </PageContainer>
-    </>
+    </div>
   );
 }
 

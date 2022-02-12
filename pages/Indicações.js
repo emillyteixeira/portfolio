@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Slider from "../src/components/Slider";
+import Carousel from "../src/components/Slider";
 
 const Title = styled.h2`
   font-family: "Sacramento";
@@ -17,30 +17,29 @@ const Text = styled.p`
   text-align: left;
 `;
 
-const PageContainer = styled.div`
-  position: relative;
-  width: 100vw;
-`;
 
 const SliderContainer = styled.div`
 
   border: 3px solid #73AD21;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 `; 
 
 
 function Indicações() {
   return (
-    <>
-      <PageContainer>
+    <div id="indicacoes">
+      
         <Title>Indicações</Title>
         <Text>Testemunhos recebidos de maneira organica e definitivamente sem compensaçao financeira</Text>
         <SliderContainer>
-          <Slider />
+          <Carousel />
         </SliderContainer>  
-      </PageContainer>
-    </>
+      
+    </div>
   );
 }
 

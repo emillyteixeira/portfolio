@@ -1,71 +1,39 @@
 import React from "react";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import Carousel from "react-material-ui-carousel";
 
-import styled from "styled-components";
+function CadaItemDoCarrosel(props) {
+  return (
+    <div className="slider-container">
+      <span className="slider-text">{props.item.text}</span>
+      <span className="slider-ass">{props.item.ass}</span>
+    </div>
+  );
+}
 
-const Text = styled.p`
-  font-family: "Josefin Sans";
-  color: #293892;
-  font-size: 20px;
-`;
+function Slider(props) {
+  var items = [
+    {
+      text: "Random Name #1",
+      ass: "Probably the most random thing you have ever seen!",
+    },
+    {
+      text: "Random Name #2",
+      ass: "Hello World!",
+    },
+    {
+      text: "Random Name #3",
+      ass: "Hello World!",
+    },
+  ];
 
-const items = [
-  <Text> eu </Text>,
-  <Text> cansei </Text>,
-  <Text>
-    {" "}
-    Fizzle shiz dolor sizzle amizzle, boom shackalack adipiscing elizzle. Nullam dizzle velizzle,
-    aliquet volutpizzle, suscipizzle shizzle my nizzle crocodizzle, sure vizzle, arcu. Pellentesque
-    fo shizzle my nizzle tortor. Sed erizzle. Fizzle bizzle get down get down dapibus bizzle
-    tempizzle check it out. Maurizzle doggy nibh izzle turpizzle. We gonna chung izzle tortizzle.
-    Pellentesque dang rhoncus bow wow wow. In yippiyo habitasse dictumst. You son of a bizzle
-    dapibus. Break yo neck, yall gangster mammasay mammasa mamma oo sa, pretizzle bling bling,
-    mattizzle ac, eleifend vitae, nunc. Pimpin' suscipizzle. Fo shizzle sempizzle velit sizzle check
-    it out.{" "}
-  </Text>,
-];
-
-const thumbItems = (items, [setThumbIndex, setThumbAnimation]) => {
-  return items.map((item, i) => (
-      <div className="thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
-          {item}
-      </div>
-  ));
-};
-
-function Slider() {
-  const slideNext = () => {
-    if (!thumbAnimation && thumbIndex < thumbs.length - 1) {
-        setThumbAnimation(true);
-        setThumbIndex(thumbIndex + 1);
-    }
-};
-
-const slidePrev = () => {
-    if (!thumbAnimation && thumbIndex > 0) {
-        setThumbAnimation(true);
-        setThumbIndex(thumbIndex - 1);
-    }
-};
-  return [
-    <>
-      <div className="btn-prev" onClick={slidePrev}>&lang;</div>
-      <AliceCarousel
-        animationType="fadeout"
-        animationDuration={800}
-        disableDotsControls
-        disableButtonsControls
-        infinite
-        items={items} 
-      />
-      <div className="btn-next" onClick={slideNext}>&rang;</div>
-      </>
- ]
+  return (
+    <Carousel className="carousel" animation="fade" cycleNavigation={true} navButtonsAlwaysVisible={true} 
+    fullHeightHover={false}>
+      {items.map((item, i) => (
+        <CadaItemDoCarrosel key={i} item={item} />
+      ))}
+    </Carousel>
+  );
 }
 
 export default Slider;
-
-
-
-

@@ -23,8 +23,10 @@ const Toggle = styled.button`
   }
   transition: all 0.5 ease;
 `;
+
 const NavWrapper = styled.nav`
-  background-color: ${(props) => props.theme.background};
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   height: 50px;
   display: flex;
   align-items: center;
@@ -34,8 +36,6 @@ const NavWrapper = styled.nav`
   z-index: 999;
   box-shadow: 0px 3px 3px 0px #d5d5d5;
   padding: 0px 10px;
-  @media screen and (max-width: 960px) {
-  }
 `;
 
 const NavContainer = styled.div`
@@ -44,8 +44,6 @@ const NavContainer = styled.div`
   align-items: center;
   height: 50px;
   max-width: 1500px;
-  @media screen and (max-width: 960px) {
-  }
 `;
 
 const NavMenu = styled.ul`
@@ -151,17 +149,17 @@ function Navbar(props) {
           </MenuIcon>
           <NavMenu isClicked={click}>
             <NavItem>
-              <Link href="/" onClick={closeMobileMenu}>
+              <Link href="#sobre-mim" onClick={closeMobileMenu}>
                 Sobre mim
               </Link>
             </NavItem>
             <NavItem>
-              <Link href="/sla" onClick={closeMobileMenu}>
+              <Link href="#projetos" onClick={closeMobileMenu}>
                 Projetos
               </Link>
             </NavItem>
             <NavItem>
-              <Link href="/sla" onClick={closeMobileMenu}>
+              <Link href="#indicacoes" onClick={closeMobileMenu}>
                 Indicações
               </Link>
             </NavItem>

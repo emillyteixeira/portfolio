@@ -1,57 +1,44 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "PT Sans", sans-serif;
+  scroll-behavior: smooth;
 }
-
-.home,
-.services,
-.products,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
 body {
   background-color: rgb(255, 255, 255);
-  
-}
-.services {
-  background-image: url("/images/img-2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+  font-family: "Josefin Sans";
+  width: 100vw;
+  height: 100vh;
+  margin: unset;
+  scroll-behavior: smooth;
 }
 
-.products {
-  background-image: url("/images/img-1.jpg");
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.slider-container {
+  background-color: #fff;
+  border: 1px solid #99c9e5;
+  border-radius: 20px;
+  height: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.carousel {
+ width: 70%;
+}
+.slider-ass {
+ color:black;
+ font-size: 18px;
+ position: absolute;
+ right: 10px;
+ bottom: 10px;
 }
 
-.sign-up {
-  background-image: url("/images/img-8.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.slider-text {
+  color:black;
+  font-size: 30px;
 }
 
-footer{
-  background: #99C9E5;
+footer {
+  background: #99c9e5;
   height: auto;
   width: 100vw;
-  font-family: 'Open Sans';
-  padding-top: 20px;
   color: #fff;
 }
