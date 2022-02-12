@@ -20,9 +20,11 @@ body {
   justify-content: center;
   position: relative;
 }
+
 .carousel {
  width: 70%;
 }
+
 .slider-ass {
  color:black;
  font-size: 18px;
