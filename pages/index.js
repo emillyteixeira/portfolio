@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Navbar from "../src/components/Navbar.js";
-import Introduction from "../src/components/Introduction";
 import Footer from "../src/components/Footer.js";
 import styled, { ThemeProvider } from "styled-components";
 
@@ -21,10 +20,6 @@ const themes = {
   light: LightTheme,
   dark: DarkTheme,
 };
-
-const PageWrapper = styled.div`
-  background: #d7eaf2;
-`;
 
 function HomePage() {
   const [theme, setTheme] = useState("light");
@@ -46,12 +41,9 @@ function HomePage() {
       </Head>
       <ThemeProvider theme={themes[theme]}>
         <Navbar setTheme={setTheme} theme={theme} />
-        <Introduction />
-        <PageWrapper>
-          <SobreMim />
-          <Projetos />
-          <Indicações />
-        </PageWrapper>
+        <SobreMim />
+        <Projetos />
+        <Indicações />
         <Footer />
       </ThemeProvider>
     </>

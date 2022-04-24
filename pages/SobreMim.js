@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Accordeon from "../src/components/Accordeon";
-
 const Title = styled.h2`
   font-family: "Sacramento";
   color: #000;
@@ -40,19 +38,6 @@ const TextContainer = styled.div`
   border-radius: 20px;
 `;
 
-const AccordeonContainer = styled.div`
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #99c9e5;
-  padding: 10px;
-  margin-left: 50px;
-  border-radius: 20px;
-  @media screen and (max-width: 960px) {
-    margin-left: 0px;
-    margin-top: 50px;
-  }
-`;
-
 function SobreMim() {
   return (
     <div id="sobre-mim">
@@ -62,11 +47,6 @@ function SobreMim() {
           <Text>Estudante na sofrencia</Text>
           <Text>lagrimas risada e suor</Text>
         </TextContainer>
-        <AccordeonContainer>
-          <Accordeon title="wejcbjkbwiecbiw" paragraph="bcwieucbiwbecwencwnicenicuwei" />
-          <Accordeon title="wejcbjkbwiecbiw" paragraph="bcwieucbiwbecwencwnicenicuwei" />
-          <Accordeon title="wejcbjkbwiecbiw" paragraph="bcwieucbiwbecwencwnicenicuwei" />
-        </AccordeonContainer>
       </PageContainer>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Card from "../src/components/Card";
 
 const Title = styled.h2`
   font-family: "Sacramento";
@@ -22,14 +21,7 @@ const PageContainer = styled.div`
   display: inline-grid;
 `;
 
-const CardContainer = styled.div`
-  float: right;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-  display: flex;
 
-`; 
 
 
 function Projetos() {
@@ -38,10 +30,6 @@ function Projetos() {
       <PageContainer>
         <Title>Projetos</Title>
         <Text>Estudante na sofrencia</Text>
-        <CardContainer>
-          <Card />
-          <Card />
-        </CardContainer>  
       </PageContainer>
     </div>
   );
