@@ -19,15 +19,10 @@
   },
   "homepage": "https://github.com/emillyteixeira/portfolio#readme",
   "dependencies": {
-    "@mui/material": "^5.4.1",
     "next": "^12.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-flippy": "^1.1.0",
     "react-icons": "^4.3.1",
-    "react-image-gallery": "^1.2.7",
-    "react-material-ui-carousel": "^3.2.0",
-    "react-switch": "^6.0.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
