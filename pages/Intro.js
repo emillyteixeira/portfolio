@@ -1,43 +1,38 @@
-import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { Images } from "../public/images/images";
+import ImgComponent from "../src/components/ImgComponent";
+import Text from "../src/components/Text";
+import MyName from "../src/components/MyName";
 
 const IntroWrapper = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   height: 100vh;
 `;
 
-const ImageWrapper = styled.div`
-  position: absolute;
-  top: ${(props) => `${props.top}px`};
-  bottom: ${(props) => `${props.bottom}px`};
-  right: ${(props) => `${props.right}px`};
-  left: ${(props) => `${props.left}px`};
-  @media screen and (max-width: 960px) {
-    display: none;
-  }
-`;
-
-const ImageContainer = styled.div`
+const TextContainer = styled.div`
   position: relative;
-  width: ${(props) => (props.width ? props.width : "auto")};
-  height: ${(props) => (props.height ? props.height : "auto")};
+  z-index: 5;
 `;
 
 const Intro = () => {
   return (
     <IntroWrapper>
-      <ImageWrapper top={-200} left={-200}>
-        <ImageContainer width="600px" height="600px">
-          <Image src={Images.joker} layout="fill" objectFit="cover" objectPosition="50% 50%" />
-        </ImageContainer>
-      </ImageWrapper>
-      <ImageWrapper top={-180} right={-180}>
-        <ImageContainer width="800px" height="140vh">
-          <Image src={Images.gameboy} layout="fill" objectFit="cover" objectPosition="50% 50%" />
-        </ImageContainer>
-      </ImageWrapper>
+       <ImgComponent zIndex={1} top={-200} left={-200} width="600px" height="600px" source={Images.joker}/>
+       <ImgComponent zIndex={1} top={-180} right={-260} width="800px" height="160vh" source={Images.gameboy}/>
+      <TextContainer>
+        <Text font="Paytone One" size="80px" color="#000" as="h1">
+          Olá, meu nome é Emilly!
+        </Text>
+        <Text font="Paytone One" size="40px" color="#000" as="h2">Sou estudante (quase o dia todo…)</Text>
+        <Text font="Raleway" size="30px" color="#000">
+          Eu sou graduanda de Letras na UFMG, cursando estudos literários e explorando o mágico
+          mundo da tecnologia!
+        </Text>
+        <MyName/>
+      </TextContainer>
     </IntroWrapper>
   );
 };
